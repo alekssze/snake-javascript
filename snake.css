@@ -1,0 +1,54 @@
+#snakeWindow {
+    --cellSize: 20px;
+    --screenWidth: 20;
+    --screenHeight: 15;
+    --borderRadius: 0.4em;
+    position: relative;
+    width: calc(var(--cellSize) * var(--screenWidth));
+    height: calc(var(--cellSize) * var(--screenHeight));
+    background-color: darkseagreen;
+    -webkit-box-shadow: inset 0px 0px 15px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: inset 0px 0px 15px -2px rgba(0, 0, 0, 0.51);
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#snakeWindow>.cell {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--cellSize);
+    height: var(--cellSize);
+}
+
+#snakeWindow>.apple {
+    background-color: tomato;
+    border-radius: var(--borderRadius);
+}
+
+#snakeWindow>.snake {
+    background-color: rgb(42, 167, 42);
+}
+
+#snakeWindow>.text {
+    color: white;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    animation-name: textHighlight;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes textHighlight {
+    from {
+        font-size: 1.1em;
+    }
+    to {
+        font-size: 1.2em;
+    }
+}

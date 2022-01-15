@@ -10,10 +10,11 @@ but watch out be careful to **not eat your tail**!
 
 ## Quick start
 ```html
-<div  id="snakeWindow">
-    <div  class="text">
+<link rel="stylesheet" href="snake.css">
+<div id="snakeWindow">
+    <div class="text">
     Press any arrow key
     </div>
 </div>
-<script  src="snake.js"></script>
+<script src="snake.js"></script>
 ```
